@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>&nbsp;후지이 카제~html</title>
+    <body>
+    <img src="https://w.namu.la/s/dcbed6ef23a5b4f1acffbb58bd63f335168e524d62d102c466e8db2920ca50c6d19c30ee93565a9d9d3a5487e532c0d0f280e4fee63f8505d80948975e146ccd15e3669912943dfa1819a84c58a67ef08497f9a2fed6b2ca29d6905921e99292f12603110a3e477d2e23af6bc960ca58"height="500">
+     <h1 style =color:#FF4500;">후지이 카제</h1>
+    <h2 style =color:#CD5C5C;>ふじいかぜ, 藤井風, Fujii Kaze</h2>
+   &nbsp;<h3 style=color:#6495ED;">한 유튜버가 업로드 한 곡, 드라마 영상을 삽입해 후지이 카제 노래와 어울리게 한 영상
+   <ol> <p><iframe width="560" height="315" src="https://www.youtube.com/embed/uVASXCjYlWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+    <li><a href="2.html">&nbsp;프로필 출생 1997. 6. 14.</a>
+    <li><a href="3.html">&nbsp;데뷔
+        2020년 디지털 싱글 앨범 [何なんw EP] 작품 앨범, 곡</a></li></ol>
+        <a href="https://www.youtube.com/watch?v=estEZLOSKJ4">&nbsp;
+            &nbsp;<strong>카제의 웃는 사진!</strong> <li>&nbsp;매우 귀엽습니다.필름 사진 감성이 카제를 예쁘게 비춰줍니다.</li>
+<h1 style="color:#D2691E;"></h1>&nbsp;&nbsp;
+ <img src="https://post-phinf.pstatic.net/MjAyMjA5MTRfNjYg/MDAxNjYzMTEyNzcyODI3.zTUHyylU4l4nYjrnVcBFVHG1cEOq2oIqEcyOcTlY0RMg.vJ05pPthco2AfFMscC_IFMbKn8YvLDWAqjxpc_AHCbQg.PNG/aramajapan.com-fujiikaze.png?type=w1200"height="600">
+  <h2 style="color:#F08080;"><br>&nbsp;&nbsp;&nbsp;
+   <br>&nbsp;노래는 이곳에- #fujiikaze #후지이카제 #藤井風 #jpop #playlist </h2>
+    </body>
+</html>
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script>
